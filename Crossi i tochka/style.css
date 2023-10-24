@@ -1,0 +1,72 @@
+@font-face {
+   font-family: "Anonymous Pro";
+   src: url(fonts/AnonymousPro-Bold.ttf);
+   font-weight: 700;
+}
+
+@font-face {
+   font-family: "Anonymous Pro";
+   src: url(fonts/AnonymousPro-Regular.ttf);
+}
+
+h1 {
+   font-family: "Anonymous Pro", sans-serif;
+   font-size: 56px;
+}
+
+h2 {
+   font-family: "Anonymous Pro", sans-serif;
+   font-size: 48px;
+}
+
+.container {
+   display: inline-block;
+   margin: 15px;
+}
+
+h3 {
+   font-family: "Anonymous Pro", sans-serif;
+   font-size: 26px;
+}
+
+p {
+   font-family: "Anonymous Pro", sans-serif;
+   font-size: 14px;
+}
+
+img {
+   width: 370px;
+}
+
+header {
+   height: 110px;
+   padding: 10px 100px 0px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header-img {
+   height: 80px;
+   margin-top: 5px;
+}
+
+.header-links {
+   width: 280px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.header-link {
+   display: flex;
+   flex-direction: row;
+}
+
+a {
+   font-family: "Anonymous Pro", sans-serif;
+   text-decoration: none; /* Убираем подчеркивание ссылок */
+   color: black; /* Цвет текста ссылок */
+}
