@@ -9,6 +9,11 @@
    src: url(fonts/AnonymousPro-Regular.ttf);
 }
 
+body{
+   background-color: rgba(241, 241, 241, 1);
+   margin: 0px;
+}
+
 h1 {
    font-family: "Anonymous Pro", sans-serif;
    font-size: 56px;
@@ -35,7 +40,7 @@ p {
 }
 
 img {
-   width: 370px;
+   height: 370px;
 }
 
 header {
@@ -44,6 +49,8 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   background-color: white;
+   border-bottom: 5px solid rgba(0,0,0,0.2);
 }
 
 .header-img {
@@ -69,4 +76,17 @@ a {
    font-family: "Anonymous Pro", sans-serif;
    text-decoration: none; /* Убираем подчеркивание ссылок */
    color: black; /* Цвет текста ссылок */
+}
+
+.main_text{
+   font-family: 'IBM Plex Mono', monospace;
+   font-size: 48px;
+   font-weight: 500;
+   line-height: 12px;
+   letter-spacing: 0em;
+   text-align: left;
+}
+
+main{
+   margin: 0px 100px;
 }
