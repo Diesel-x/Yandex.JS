@@ -9,121 +9,151 @@
    src: url(fonts/AnonymousPro-Regular.ttf);
 }
 
-body{
+body {
    background-color: rgba(241, 241, 241, 1);
    margin: 0px;
-}
 
-h1 {
-   font-family: "Anonymous Pro", sans-serif;
-   font-size: 56px;
-}
-
-h2 {
-   font-family: "Anonymous Pro", sans-serif;
-   font-size: 48px;
-}
-
-h3 {
-   font-family: "Anonymous Pro", sans-serif;
-   font-size: 26px;
-}
-
-p {
-   font-family: "Anonymous Pro", sans-serif;
-   font-size: 14px;
+   /* display: flex;
+   flex-direction: column;
+   align-items: ;
+   gap: 10px; */
 }
 
 header {
-   height: 110px;
-   padding: 10px 100px 0px 100px;
+   padding: 20px 100px 10px 100px;
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
    background-color: white;
-   border-bottom: 5px solid rgba(0,0,0,0.2);
+   border-bottom: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 .header-img {
-   height: 80px;
-   margin-top: 5px;
+   height: 70px;
 }
 
 .header-links {
-   width: 280px;
    display: flex;
-   flex-direction: row;
-   justify-content: space-between;
+   gap: 25x;
    font-size: 20px;
    font-weight: bold;
+   font-family: "Anonymous Pro", sans-serif;
 }
 
 .header-link {
-   display: flex;
-   flex-direction: row;
+   list-style: none;
 }
 
-a {
+header a {
    font-family: "Anonymous Pro", sans-serif;
-   text-decoration: none; /* Убираем подчеркивание ссылок */
-   color: black; /* Цвет текста ссылок */
+   text-decoration: none;
+   color: black;
 }
 
-.main_text{
-   font-family: 'IBM Plex Mono', monospace;
+.main_text {
+   display: table;
+   overflow: hidden;
+   font-family: "IBM Plex Mono", monospace;
    font-size: 48px;
-   font-weight: 500;
-   margin-top: 15px;
-   margin-bottom: 10px;
-   letter-spacing: 0em;
    text-align: left;
+   font-weight: 700;
+   margin: 0px;
 }
 
-main{
+main {
+   margin-top: 20px;
+   margin-bottom: 25px;
+   width: max-content;
    margin-left: auto;
    margin-right: auto;
-   width: 1300px;
-}
-
-.shoes_container{
    display: flex;
-   flex-direction: row;
-   justify-content: space-between;
+   flex-direction: column;
+   gap: 24px;
 }
 
-.shoes_card{
-   box-sizing: content-box;
+.shoes_container {
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   gap: 24px;
+   flex-wrap: wrap;
+}
+
+.shoes_card {
+   display: flex;
+   flex-direction: column;
    background-color: white;
    border-radius: 10px;
-   margin-top: 15px;
-   margin-bottom: 15px;
 }
 
-.shoes_image{
-   width: 400px;
-   height: 300px;
-   object-fit:contain;
+.shoes_image {
+   width: 100%;
+   height: auto;
+   object-fit: contain;
 }
 
-.shoes_text{
+.shoes_text {
    text-wrap: wrap;
-   margin-left: 20px;
-   width: 380px;
+   margin: 32px 24px;
+   width: 323px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
 }
 
-.shoes_title{
-   font-family: 'Anonymous Pro', monospace;
+.shoes_title {
+   font-family: "Anonymous Pro", monospace;
    font-size: 26px;
    font-weight: 700;
    text-align: left;
+   margin: 0px;
 }
 
-.shoes_p{
-   font-family: 'Anonymous Pro', monospace;
+.shoes_p {
+   font-family: "Anonymous Pro", monospace;
    font-size: 20px;
    font-weight: 400;
    text-align: left;
+   margin: 0px;
 }
 
+footer {
+   padding: 20px 100px 10px 100px;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   background-color: #121723;
+}
 
+.footer-container-1 {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+}
 
+.footer-hr {
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #e6e8ec66;
+   margin: 1em 0;
+   padding: 0;
+}
+
+footer a {
+   font-family: "Anonymous Pro", sans-serif;
+   text-decoration: none;
+   color: white;
+}
+
+.footer-text {
+   font-family: Anonymous Pro;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 16px;
+   letter-spacing: 0em;
+   text-align: center;
+   color: #e6e8ec66;
+}
