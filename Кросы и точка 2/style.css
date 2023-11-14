@@ -125,6 +125,10 @@ h1 {
    background: white;
 }
 
+.sneaker_animation:hover {
+    transform: translate(0px, -5px);
+}
+
 .sneaker-image {
    width: 100%;
 }
