@@ -1,5 +1,5 @@
 import Styles from "./CardList.module.css";
-import { NewCardsList } from "./NewCardsFragment";
+import { NewCardsFragment } from "./NewCardsFragment";
 
 export const NewCardsList = () => {
   return (
@@ -7,7 +7,9 @@ export const NewCardsList = () => {
       <h2 className={Styles["list-section__title"]} id="new">
         Новинки
       </h2>
-      <ul className={Styles["cards-list"]}></ul>
+      <ul className={Styles["cards-list"]}>
+        <NewCardsFragment />
+      </ul>
     </section>
   );
 };
