@@ -10,17 +10,17 @@ export const Footer = () => {
       </a>
       <ul className={Styles["social-list"]}>
         <li className={Styles["social-list__item"]}>
-          <a href="" className={Styles["button social-list__link"]}>
+          <a href="" className={`${Styles["social-list__link"]} button`}>
             YT
           </a>
         </li>
         <li className={Styles["social-list__item"]}>
-          <a href="" className={Styles["button social-list__link"]}>
+          <a href="" className={`${Styles["social-list__link"]} button`}>
             ВК
           </a>
         </li>
         <li className={Styles["social-list__item"]}>
-          <a href="" className={Styles["button social-list__link"]}>
+          <a href="" className={`${Styles["social-list__link"]} button`}>
             TG
           </a>
         </li>
