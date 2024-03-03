@@ -5,6 +5,7 @@ import "./globals.css";
 import { Banner } from "./components/Banner/Banner";
 import { Promo } from "./components/Promo/Promo";
 import { CardsList } from "./components/CardsList/CardsList";
+import { getGamesByCategory } from "./Data/data-utils";
 
 export default function Home() {
   return (
