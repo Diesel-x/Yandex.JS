@@ -1,52 +1,118 @@
+"use client";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
 import Styles from "./Header.module.css";
+import { Overlay } from "../Overlay/Overlay";
+import { Popup } from "../Popup/Popup";
+import { AuthForm } from "../AuthForm/AuthForm";
+import { useStore } from "@/app/store/app-store";
 
 export const Header = () => {
+  const pathname = usePathname();
+  const authContext = useStore();
+
+  const handleLogout = () => {
+    authContext.logout();
+  };
+
   return (
     <header className={Styles["header"]}>
-      <a href="./index.html" className={Styles["logo"]}>
+      <Link href="/" className={Styles["logo"]}>
         <img
           className={Styles["logo__image"]}
-          src="./images/logo.svg"
+          src="/images/logo.svg"
           alt="Логотип Pindie"
         />
-      </a>
+      </Link>
       <nav className={Styles["menu"]}>
         <ul className={Styles["menu__list"]}>
           <li className={Styles["menu__item"]}>
-            <a href="" className={Styles["menu__link"]}>
+            <Link
+              href="/new"
+              className={`${Styles["menu__link"]} ${
+                pathname === "/new" ? Styles["menu__link_active"] : ""
+              }`}
+            >
               Новинки
-            </a>
+            </Link>
           </li>
           <li className={Styles["menu__item"]}>
-            <a href="" className={Styles["menu__link"]}>
+            <Link
+              href="/popular"
+              className={`${Styles["menu__link"]} ${
+                pathname === "/popular" ? Styles["menu__link_active"] : ""
+              }`}
+            >
               Популярные
-            </a>
+            </Link>
           </li>
           <li className={Styles["menu__item"]}>
-            <a href="" className={Styles["menu__link"]}>
+            <Link
+              href="/shooters"
+              className={`${Styles["menu__link"]} ${
+                pathname === "/shooters" ? Styles["menu__link_active"] : ""
+              }`}
+            >
               Шутеры
-            </a>
+            </Link>
           </li>
           <li className={Styles["menu__item"]}>
-            <a href="" className={Styles["menu__link"]}>
-              Ранеры
-            </a>
+            <Link
+              href="/runners"
+              className={`${Styles["menu__link"]} ${
+                pathname === "/runners" ? Styles["menu__link_active"] : ""
+              }`}
+            >
+              Раннеры
+            </Link>
           </li>
           <li className={Styles["menu__item"]}>
-            <a href="" className={Styles["menu__link"]}>
+            <Link
+              href="/pixel-games"
+              className={`${Styles["menu__link"]} ${
+                pathname === "/pixel-games" ? Styles["menu__link_active"] : ""
+              }`}
+            >
               Пиксельные
-            </a>
+            </Link>
           </li>
           <li className={Styles["menu__item"]}>
-            <a href="" className={Styles["menu__link"]}>
+            <Link
+              href="/tds"
+              className={`${Styles["menu__link"]} ${
+                pathname === "/tds" ? Styles["menu__link_active"] : ""
+              }`}
+            >
               TDS
-            </a>
+            </Link>
           </li>
         </ul>
-        <div className={Styles["auth"]}>
-          <button className={Styles["auth__button"]}>Войти</button>
+        <div className={Styles.auth}>
+          {authContext.isAuth ? (
+            <button className={Styles["auth__button"]} onClick={handleLogout}>
+              Выйти
+            </button>
+          ) : (
+            <button
+              className={Styles["auth__button"]}
+              onClick={authContext.openPopup}
+            >
+              Войти
+            </button>
+          )}
         </div>
       </nav>
+      <Overlay
+        popupIsOpened={authContext.popupIsOpened}
+        closePopup={authContext.closePopup}
+      />
+      <Popup
+        popupIsOpened={authContext.popupIsOpened}
+        closePopup={authContext.closePopup}
+      >
+        <AuthForm close={authContext.closePopup} />
+      </Popup>
     </header>
   );
 };

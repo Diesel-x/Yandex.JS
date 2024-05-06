@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Rubic One";
+  src: url(/fonts/rubic-one.woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url(/fonts/anonymouspro-regular.woff);
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url(/fonts/anonymouspro-bold.woff);
+  font-weight: bold;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -6,26 +25,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-@font-face {
-  font-family: "Rubic One";
-  src: url("/fonts/rubic-one.woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Anonymous Pro";
-  src: url("/fonts/anonymouspro-regular.woff");
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Anonymous Pro";
-  src: url("/fonts/anonymouspro-bold.woff");
-  font-weight: bold;
-  font-display: swap;
 }
 
 body {
@@ -90,6 +89,16 @@ button {
 .button:hover {
   background-color: black;
   color: #ffff00;
+}
+
+.main {
+  overflow: hidden;
+}
+
+@media (width <= 1728px) {
+  body {
+    border: none;
+  }
 }
 
 @media (width <= 1440px) {
